@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alteração de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/alteracao.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Navbar -->
+    <nav class="nav-container">
+      <ul>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="remocao.html">Remoção</a></li>
+        <li><a href="alteracao.html">Alteração</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+      </ul>
+    </nav>
+
+    <div class="title">
+      <h1>Alteração de Produtos</h1>
+    </div>
+
+    <!-- Tabela de produtos -->
+    <div id="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Preço</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="produto-tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- Modal de edição -->
+    <div id="modal">
+      <h3>Editar Produto</h3>
+      <form id="edit-form">
+        <input type="hidden" id="edit-index">
+        <input type="text" id="edit-nome" placeholder="Nome" required>
+        <input type="text" id="edit-categoria" placeholder="Categoria" required>
+        <input type="number" id="edit-preco" placeholder="Preço" step="0.01" required>
+        <button type="submit">Salvar Alterações</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
