@@ -1,9 +1,14 @@
+// pega se tiver algo no storage ou cria array vazio
 let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+
+// pega a tabela
 const tbody = document.getElementById("produto-tbody");
 
+// renderiza os produtos cadastrados
 function renderTabela() {
   tbody.innerHTML = "";
 
+  
   if (produtos.length === 0) {
     const tr = document.createElement("tr");
     tr.innerHTML = `<td colspan="4" style="text-align: center;">Nenhum produto cadastrado.</td>`;
@@ -11,6 +16,7 @@ function renderTabela() {
     return;
   }
 
+  // Cria uma linha para cada produto com btn de exclusão
   produtos.forEach((produto, index) => {
     const tr = document.createElement("tr");
 
@@ -27,6 +33,7 @@ function renderTabela() {
   });
 }
 
+// Função para excluir um produto
 function removerProduto(index) {
   const confirmacao = confirm("Tem certeza que deseja remover este produto?");
   if (confirmacao) {
@@ -35,5 +42,6 @@ function removerProduto(index) {
     renderTabela();
   }
 }
+
 
 renderTabela();

@@ -12,38 +12,45 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(240, 248, 255, 0.712);
 }
 
 /* Estilos gerais */
 
 .container{
-    border: 1px solid red;
-    width: 40%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(108,227,222,1) 0%, rgba(0,185,255,1) 100%); width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 50px;
+    padding: 50px 0;
 }
 
 .nav-container{
     width: 100%;
-    padding-top: 10px;
+    
 }
 
 nav ul{
     display: flex;
     justify-content: space-around;
     list-style: none;
-   
 }
 
 nav ul li{
     transition: .3s;
+    
 }
 
 nav ul li a{
     text-decoration: none;
     color: black;
-    
+    font-size: 1.3rem;
+    border: .3px solid black;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 nav ul li:hover{
@@ -52,8 +59,10 @@ nav ul li:hover{
 }
 
 .title{
-    padding: 20px 0;
+    padding: 30px 0;
 }
+
+
 
 /* página de cadastro */
 
@@ -90,10 +99,11 @@ nav ul li:hover{
 table {
     width: 100%;
     border-collapse: collapse;
+    
 }
   
 table, th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
  }
   
 th, td {
